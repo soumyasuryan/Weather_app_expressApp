@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+       <%- include('partials/header.ejs') %>
+ <div class="details">
+<img src="img/im2.webp" alt="">
+<div class="description">
+ <h2>🌤️ Weather App</h2>
+  <p>
+    Stay informed and plan your day with our simple and accurate <strong>Weather App</strong>!
+    Just type in the name of any city, and instantly get real-time weather data including:
+  </p>
+  <ul>
+    <li>🌡️ <strong>Temperature</strong></li>
+    <li>💨 <strong>Wind Speed</strong></li>
+    <li>💧 <strong>Humidity</strong></li>
+    <li>🌥️ <strong>Sky Condition</strong> (like Clear, Clouds, Rain, etc.)</li>
+  </ul>
+  <p>
+    Our app fetches data from a reliable weather API and displays it in a clean and user-friendly interface.
+    Whether you're getting ready for a trip or just picking out clothes for the day, our app has you covered.
+  </p>
+
+  <h3>🔧 Features:</h3>
+  <ul>
+    <li>Instant weather updates by city name</li>
+    <li>Interactive and responsive UI</li>
+    <li>Built with HTML, CSS, and JavaScript</li>
+    <li>Fetches data using the <a href="https://openweathermap.org/api" target="_blank">OpenWeatherMap API</a></li>
+  </ul>
+   </div>
+   
+        <%- include('partials/footer.ejs') %>
+    </div>
+
+</body>
+</html>

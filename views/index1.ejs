@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Savate:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    <div class="container container1">
+        <%- include('partials/header.ejs') %>
+        <% if (weather) { %>
+            
+       
+            <div class="weather">
+                <div class="location"><%=location %></div>
+                <div class="temp">
+                    <%=temp %><div>°C</div>
+                </div>
+                <div class="feels_like">Feels like:<%= feels_like %>
+                </div>
+                <% const
+                    weatherTypes=["Clear","Clouds","Rain","Snow","Thunderstorm","Drizzle","Mist","Smoke","Haze","Dust","Fog","Sand","Ash","Squall","Tornado"];%>
+                    <% const weatherWithEmojis=["Clear ☀️", "Clouds ☁️" , "Rain 🌧️" , "Drizzle 🌦️" , "Thunderstorm ⛈️"
+                        , "Snow ❄️" , "Mist 🌫️" , "Smoke 💨" , "Haze 🌁" , "Dust 🌪️" , "Fog 🌫️" , "Sand 🏜️"
+                        , "Ash 🌋" , "Squall 🌬️" , "Tornado 🌪️" ]; %>
+                        <% for (let index=0; index < weatherTypes.length; index++) {%>
+                            <% if(weatherTypes[index]==weather.main){ %>
+                                <h1>
+                                    <%=weatherWithEmojis[index]%>
+                                </h1>
+                                <h3>
+                                    <%=weather.description%>
+                                </h3>
+                                <% } %>
+                                    <% } %>
+                                        <div class="other">
+                                            <div class="box">
+                                                <h5>Humidity💧</h5>
+                                                <h6>
+                                                    <%=humidity %>
+                                                </h6>
+                                            </div>
+                                            <div class="box">
+                                                <h5>Wind Speed💨</h5>
+                                                <h6>
+                                                    <%=wind_speed %>
+                                                </h6>
+                                            </div>
+                                            <div class="box">
+                                                <h5>Time⏰</h5>
+                                                <h6>
+                                                    <%=now%>
+                                                </h6>
+                                            </div>
+
+
+                                        </div>
+            </div>
+             <%}else{ %>
+                <h1><%=error %></h1>
+                <% } %>
+
+    </div>
+    <%-include('partials/footer.ejs') %>
+</body>
+
+</html>

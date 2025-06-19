@@ -1,0 +1,201 @@
+body {
+  background-color: #FFF2E0;
+  margin: 0;
+}
+
+.search-form {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  border: 2px solid #337ab7;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.search-form input[type="text"] {
+  flex: 1;
+  border: none;
+  padding: 0 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-form button {
+  background-color: #337ab7;
+  border: none;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search-form button svg {
+  fill: white;
+  width: 20px;
+  height: 20px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+h5 {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+
+  /* border: 1px solid; */
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  width: 100vw;
+  display: flex;
+}
+
+form {
+  margin-top: 5vh;
+  margin-left: 68vw;
+}
+
+nav svg {
+  height: 100px;
+  width: 120px;
+}
+
+.details {
+  width: 100vw;
+  background: url('/public/im3.jpg');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.details img {
+  width: 400px;
+}
+.description{
+  margin: 8px;
+}
+footer a {
+  color: white;
+}
+
+footer {
+  background-color: #898AC4;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 80px;
+  border-top: 1px solid #ccc;
+  width: 100vw;
+  height: 80px;
+  font-size: 12px;
+}
+
+
+.weather {
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35vw;
+  margin-left: 32vw;
+  border-radius: 25px;
+  background-color: #FCD8CD;
+
+}
+
+.other {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(131, 126, 126);
+  margin: 0 30px;
+}
+
+.temp {
+  font-size: 100px;
+  font-family: "Savate", sans-serif;
+  font-optical-sizing: auto;
+}
+.temp div{
+  font-size: 40px;
+}
+
+.feels_like {
+  font-size: 20px;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+.location {
+  font-size: 30px;
+  font-family: "Savate", sans-serif;
+}
+@media(max-width:1200px){
+  form{
+    margin-left: auto;
+    margin-right: 4vw;
+  }
+  .weather{
+    width: 60%;margin-left: 20vw;
+  }
+}
+@media(max-width:700px){
+  .weather{
+    width: 80%;
+    margin-left: 12vw;
+  }
+
+}
+@media(max-width:500px){
+  .search-form{
+    margin-bottom: 30px;
+  }
+  nav svg{
+    height:70px;
+    width: 90px;
+  }
+  .weather{
+    width: 90%;
+    margin-left: 6vw;
+  }
+  footer{
+    margin-top: 0;
+  }
+  .box{
+    align-items: center;
+  }
+  .box h5{
+    font-size: 10px;
+  }
+  .description{
+    margin: 8px;
+  }
+}
