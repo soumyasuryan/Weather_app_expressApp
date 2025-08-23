@@ -54,7 +54,7 @@ const feels_like=Math.floor(result.data.main.feels_like)
 const humidity=Math.floor(result.data.main.humidity)
 const wind_speed=result.data.visibility
 const now = new Date();
-res.render("index1.ejs",{weather:result.data.weather[0],temp,feels_like,humidity,wind_speed,now:now.toLocaleTimeString(),location:result.data.name})
+res.render("index1.ejs",{weather:result.data.weather[0],temp,feels_like,humidity,wind_speed,now:now.toLocaleTimeString(),location:req.body.locn})
 } catch (error) {
   res.render("index1.ejs",{ weather: null,
       temp: null,

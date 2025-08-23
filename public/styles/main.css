@@ -1,14 +1,17 @@
-body {
-  background-color: #FFF2E0;
+html, body {
+  height: 100%;
   margin: 0;
+  background: linear-gradient(to bottom, #89f7fe, #66a6ff, #00f2fe);
+  background-attachment: fixed;  /* Keeps gradient while scrolling */
 }
 
+
 .search-form {
-  width: 300px;
-  height: 50px;
+  width: 354px;
+  height: 64px;
   display: flex;
   border: 2px solid #337ab7;
-  border-radius: 12px;
+  border-radius: 34px;
   overflow: hidden;
 }
 
@@ -18,22 +21,26 @@ body {
   padding: 0 10px;
   font-size: 16px;
   outline: none;
+  background-color:white ;
 }
 
 .search-form button {
-  background-color: #337ab7;
+   background-color: #0f172a;
   border: none;
-  padding: 0 20px;
+  /* padding-right: 20px; */
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  /* border-radius: 50%; */
 }
 
 .search-form button svg {
   fill: white;
   width: 20px;
   height: 20px;
+  margin-left: 0;
+  margin: 15px;
 }
 
 .material-symbols-outlined {
@@ -64,7 +71,7 @@ h5 {
 }
 
 nav {
-  width: 100vw;
+  width: 99vw;
   display: flex;
 }
 
@@ -76,6 +83,7 @@ form {
 nav svg {
   height: 100px;
   width: 120px;
+  margin-left: 30px;
 }
 
 .details {
@@ -98,7 +106,7 @@ footer a {
 }
 
 footer {
-  background-color: #898AC4;
+  background-color: #0f172a;
   color: white;
   padding: 10px 0;
   text-align: center;
@@ -111,14 +119,16 @@ footer {
 
 
 .weather {
-  border: 1px solid;
+  /* border: 1px solid; */
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 35vw;
   margin-left: 32vw;
   border-radius: 25px;
-  background-color: #FCD8CD;
+   background-color: #0f172a;
+   color: white;
+   padding-top: 20px;
 
 }
 
@@ -141,9 +151,10 @@ footer {
   font-size: 100px;
   font-family: "Savate", sans-serif;
   font-optical-sizing: auto;
+  display: flex;
 }
 .temp div{
-  font-size: 40px;
+  font-size: 25px;
 }
 
 .feels_like {
@@ -198,4 +209,22 @@ footer p {
   .description{
     margin: 8px;
   }
+}
+#footer1{
+  margin-top: 124px;
+}
+#card-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-left: 0;
+}
+.weather-card{
+  list-style: none;
+  border: solid;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 40px; 
+  border-radius: 12px; 
 }
