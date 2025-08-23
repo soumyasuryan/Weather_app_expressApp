@@ -1,5 +1,7 @@
 import express from "express"
 import axios from "axios"
+import dotenv from "dotenv";
+dotenv.config();
 const app =express()
 const port=3000
 app.use(express.urlencoded({ extended: true }));
@@ -7,9 +9,8 @@ let longitude
 let latitude
 let locn_arr=[]
 
-const your_APIkey="a2297cef3940f284954701ba419a30bd"
-const geocoding_APIKey="4569e1b1d7e9482688f1f2b55cdb8680"
-
+const your_APIkey = process.env.YOUR_API_KEY;
+const geocoding_APIKey = process.env.GEOCODING_API_KEY;
 async function getCoordinates(city) {
       
       const apiKey = geocoding_APIKey
